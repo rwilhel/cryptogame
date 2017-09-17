@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3048C98B1F6F0F91003292A1 /* EndlessBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3048C98A1F6F0F91003292A1 /* EndlessBackground.swift */; };
 		30A096591F6EFDC000459E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A096581F6EFDC000459E31 /* AppDelegate.swift */; };
 		30A0965B1F6EFDC000459E31 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30A0965A1F6EFDC000459E31 /* GameScene.sks */; };
 		30A0965F1F6EFDC000459E31 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0965E1F6EFDC000459E31 /* GameScene.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3048C98A1F6F0F91003292A1 /* EndlessBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndlessBackground.swift; path = ../EndlessBackground.swift; sourceTree = "<group>"; };
 		30A096551F6EFDC000459E31 /* cryptogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A096581F6EFDC000459E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A0965A1F6EFDC000459E31 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				30A096721F6F081500459E31 /* fonts */,
 				30A096581F6EFDC000459E31 /* AppDelegate.swift */,
+				3048C98A1F6F0F91003292A1 /* EndlessBackground.swift */,
 				30A0965A1F6EFDC000459E31 /* GameScene.sks */,
 				30A0965E1F6EFDC000459E31 /* GameScene.swift */,
 				30A096601F6EFDC000459E31 /* GameViewController.swift */,
@@ -168,6 +171,7 @@
 			files = (
 				30A0965F1F6EFDC000459E31 /* GameScene.swift in Sources */,
 				30A096781F6F0B5A00459E31 /* MenuScene.swift in Sources */,
+				3048C98B1F6F0F91003292A1 /* EndlessBackground.swift in Sources */,
 				30A096611F6EFDC000459E31 /* GameViewController.swift in Sources */,
 				30A096591F6EFDC000459E31 /* AppDelegate.swift in Sources */,
 			);
@@ -331,6 +335,7 @@
 				30A0966F1F6EFDC000459E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
