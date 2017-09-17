@@ -16,9 +16,9 @@ class GameScene: SKScene {
     var fence: EndlessBackground!
     
     override func didMove(to view: SKView) {
-        sky = EndlessBackground(parent: self, sprite: self.childNode(withName: "sky") as! SKSpriteNode, speed: 5)
-        forest = EndlessBackground(parent: self, sprite: self.childNode(withName: "forest") as! SKSpriteNode, speed: 5)
-        fence = EndlessBackground(parent: self, sprite: self.childNode(withName: "fence") as! SKSpriteNode, speed: 5)
+        sky = EndlessBackground(parent: self, sprite: self.childNode(withName: "sky") as! SKSpriteNode, speed: 1)
+        forest = EndlessBackground(parent: self, sprite: self.childNode(withName: "forest") as! SKSpriteNode, speed: 3)
+        fence = EndlessBackground(parent: self, sprite: self.childNode(withName: "fence") as! SKSpriteNode, speed: 6)
     }
     
     override func update(_ currentTime: TimeInterval) {
