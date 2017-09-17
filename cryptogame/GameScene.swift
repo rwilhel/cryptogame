@@ -32,7 +32,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if cryptkeeper.physicsBody?.velocity.dy == 0 {
-            cryptkeeper.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 120))
+            cryptkeeper.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 900))
         }
     }
 }
