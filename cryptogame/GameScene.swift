@@ -15,6 +15,7 @@ class GameScene: SKScene {
     var forest: EndlessBackground!
     var fence: EndlessBackground!
     var cryptkeeper: SKSpriteNode!
+    var hand: SKSpriteNode!
     
     override func didMove(to view: SKView) {
         sky = EndlessBackground(parent: self, sprite: self.childNode(withName: "sky") as! SKSpriteNode, speed: 1)
@@ -22,17 +23,25 @@ class GameScene: SKScene {
         fence = EndlessBackground(parent: self, sprite: self.childNode(withName: "fence") as! SKSpriteNode, speed: 6)
         
         cryptkeeper = self.childNode(withName: "cryptkeeper") as! SKSpriteNode!
+        hand = self.childNode(withName: "hand") as! SKSpriteNode!
     }
     
     override func update(_ currentTime: TimeInterval) {
         sky.update()
         forest.update()
         fence.update()
+        updateHand() 
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if cryptkeeper.physicsBody?.velocity.dy == 0 {
             cryptkeeper.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 900))
+        }
+    }
+    
+    func updateHand() {
+        if hand.position.x + hand.size.width < 0 {
+            hand.position.x = self.size.width
         }
     }
 }
