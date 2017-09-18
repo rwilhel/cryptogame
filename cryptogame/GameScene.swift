@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var sky: EndlessBackground!
     var forest: EndlessBackground!
@@ -24,6 +24,8 @@ class GameScene: SKScene {
         
         cryptkeeper = self.childNode(withName: "cryptkeeper") as! SKSpriteNode!
         hand = self.childNode(withName: "hand") as! SKSpriteNode!
+        
+        physicsWorld.contactDelegate = self
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -43,5 +45,22 @@ class GameScene: SKScene {
         if hand.position.x + hand.size.width < 0 {
             hand.position.x = self.size.width
         }
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        if contactMask == 2 | 4 {
+            gameOver()
+        }
+    }
+    
+    func gameOver () {
+        hand.removeAllActions()
+        cryptkeeper.removeAllActions()
+        
+        fence.stop()
+        forest.stop()
+        sky.stop()
     }
 }
