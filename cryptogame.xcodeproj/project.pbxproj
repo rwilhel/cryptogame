@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3011D6941F6F6DF10098EB7F /* dinosaur.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3011D6911F6F6DF10098EB7F /* dinosaur.wav */; };
+		3011D6951F6F6DF10098EB7F /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3011D6921F6F6DF10098EB7F /* hit.wav */; };
+		3011D69F1F6F72B30098EB7F /* ScarletDriveReady.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3011D69E1F6F72B30098EB7F /* ScarletDriveReady.mp3 */; };
 		3048C98B1F6F0F91003292A1 /* EndlessBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3048C98A1F6F0F91003292A1 /* EndlessBackground.swift */; };
 		30A096591F6EFDC000459E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A096581F6EFDC000459E31 /* AppDelegate.swift */; };
 		30A0965B1F6EFDC000459E31 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30A0965A1F6EFDC000459E31 /* GameScene.sks */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3011D6911F6F6DF10098EB7F /* dinosaur.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dinosaur.wav; sourceTree = "<group>"; };
+		3011D6921F6F6DF10098EB7F /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
+		3011D69E1F6F72B30098EB7F /* ScarletDriveReady.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ScarletDriveReady.mp3; sourceTree = "<group>"; };
 		3048C98A1F6F0F91003292A1 /* EndlessBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndlessBackground.swift; path = ../EndlessBackground.swift; sourceTree = "<group>"; };
 		30A096551F6EFDC000459E31 /* cryptogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A096581F6EFDC000459E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3011D6901F6F673F0098EB7F /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3011D69E1F6F72B30098EB7F /* ScarletDriveReady.mp3 */,
+				3011D6911F6F6DF10098EB7F /* dinosaur.wav */,
+				3011D6921F6F6DF10098EB7F /* hit.wav */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
 		30A0964C1F6EFDC000459E31 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +84,7 @@
 		30A096571F6EFDC000459E31 /* cryptogame */ = {
 			isa = PBXGroup;
 			children = (
+				3011D6901F6F673F0098EB7F /* sounds */,
 				30A096721F6F081500459E31 /* fonts */,
 				30A096581F6EFDC000459E31 /* AppDelegate.swift */,
 				3048C98A1F6F0F91003292A1 /* EndlessBackground.swift */,
@@ -157,6 +174,9 @@
 				30A096641F6EFDC000459E31 /* Main.storyboard in Resources */,
 				30A0965B1F6EFDC000459E31 /* GameScene.sks in Resources */,
 				30A096661F6EFDC000459E31 /* Assets.xcassets in Resources */,
+				3011D6941F6F6DF10098EB7F /* dinosaur.wav in Resources */,
+				3011D69F1F6F72B30098EB7F /* ScarletDriveReady.mp3 in Resources */,
+				3011D6951F6F6DF10098EB7F /* hit.wav in Resources */,
 				30A096711F6F046800459E31 /* MenuScene.sks in Resources */,
 				30A096691F6EFDC000459E31 /* LaunchScreen.storyboard in Resources */,
 			);

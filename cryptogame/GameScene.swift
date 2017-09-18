@@ -17,6 +17,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var cryptkeeper: SKSpriteNode!
     var hand: SKSpriteNode!
     
+    var isOver = false
+    
     override func didMove(to view: SKView) {
         sky = EndlessBackground(parent: self, sprite: self.childNode(withName: "sky") as! SKSpriteNode, speed: 1)
         forest = EndlessBackground(parent: self, sprite: self.childNode(withName: "forest") as! SKSpriteNode, speed: 3)
@@ -24,6 +26,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         cryptkeeper = self.childNode(withName: "cryptkeeper") as! SKSpriteNode!
         hand = self.childNode(withName: "hand") as! SKSpriteNode!
+        
+        let backgroundMusic = SKAudioNode(fileNamed: "ScarletDriveReady.mp3")
+        backgroundMusic.autoplayLooped = true
+        self.addChild(backgroundMusic)
         
         physicsWorld.contactDelegate = self
     }
@@ -36,13 +42,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if cryptkeeper.physicsBody?.velocity.dy == 0 {
+        if cryptkeeper.physicsBody?.velocity.dy == 0 && !isOver {
+            self.run(SKAction.playSoundFileNamed("hit.wav", waitForCompletion: false))
             cryptkeeper.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 900))
         }
     }
     
     func updateHand() {
         if hand.position.x + hand.size.width < 0 {
+            self.run(SKAction.playSoundFileNamed("dinosaur.wav", waitForCompletion: false))
             hand.position.x = self.size.width
         }
     }
@@ -56,6 +64,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func gameOver () {
+        isOver = true
         hand.removeAllActions()
         cryptkeeper.removeAllActions()
         
